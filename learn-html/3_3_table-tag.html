@@ -1,44 +1,109 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Table Tag</title>
+
+    <style>
+        table {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            border: 1px solid black;
+            padding: 12px;
+        }
+
+        .col1 {
+            width: 80px;
+        }
+
+        .col2 {
+            background-color: yellow;
+        }
+    </style>
 </head>
 
-<style>
-    table {
-        border: 1px solid black;
-        border-collapse: collapse;
-    }
-
-    th,
-    td {
-        border: 1px solid black;
-        padding: 12px;
-    }
-</style>
-
 <body>
+
     <h1>Table 기본</h1>
+
     <table>
         <caption>프로필 테이블</caption>
+
         <tr>
             <th>이름</th>
             <th>취미</th>
             <th>특기</th>
         </tr>
+
         <tr>
-            <th>조은동</th>
-            <th>냄새맡기</th>
-            <th>집 지키기</th>
+            <td>조은동</td>
+            <td>냄새맡기</td>
+            <td>집 지키기</td>
         </tr>
+
         <tr>
-            <th>황초롱</th>
-            <th>사냥</th>
-            <th>햇볕쬐기</th>
+            <td>황초롱</td>
+            <td>사냥</td>
+            <td>햇볕쬐기</td>
         </tr>
+    </table>
+
+    <hr>
+
+    <h1>Table 그룹 태그</h1>
+
+    <table>
+        <caption>학급 점수</caption>
+        <colgroup>
+            <col class="col1">
+            <col class="col2">
+            <col>
+            <col>
+            <col>
+            <col>
+        </colgroup>
+        <thead>
+            <tr>
+                <th>반</th>
+                <th>이름</th>
+                <th>국어</th>
+                <th>영어</th>
+                <th>수학</th>
+                <th>코딩</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td rowspan="2">1반</td>
+                <td>조은동</td>
+                <td>100</td>
+                <td>100</td>
+                <td>100</td>
+                <td>100</td>
+            </tr>
+            <tr>
+                <td>황초롱</td>
+                <td>100</td>
+                <td>100</td>
+                <td>100</td>
+                <td>100</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="2">평균</td>
+                <td>100</td>
+                <td>100</td>
+                <td>100</td>
+                <td>100</td>
+            </tr>
+        </tfoot>
     </table>
 </body>
 
