@@ -26,3 +26,9 @@
 // 루트('/') 디렉터리부터 시작하는 경우 현재 도메인이 자동으로 앞에 붙음
 // ex2) /apple.png
 // ex3) C:/User/gymcoding/apple.png
+
+// 상대경로
+// 현재 문서를 기준으로 경로를 인식
+// ex1) index.html에서 동일 위치 → src="apple.png" 혹은 src="./apple.png"
+// ex2) index.html의 상위 폴더에 이미지가 있는 경우 → src="../apple.png"
+// ex3) index.html의 하위 폴더에 이미지가 있는 경우 → src="하위폴더/apple.png"
